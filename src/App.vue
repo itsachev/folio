@@ -1,20 +1,15 @@
+<script setup>
+import { useMainStore } from './stores/useMainStore'
+import { storeToRefs } from 'pinia'
+
+
+const mainStore = useMainStore()
+const { isInitialLoading, isLoading } = storeToRefs(mainStore)
+</script>
+
 <template>
     <div>
-        app
+        <p>isInitialLoading: {{ isInitialLoading }}</p>
+        <p>isLoading: {{ isLoading }}</p>
     </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
