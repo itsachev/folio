@@ -14,8 +14,10 @@
 
 /* 3. Allow percentage-based heights in the application */
 html,
-body {
+body,
+#app {
     height: 100%;
+    min-height: 100%;
 }
 
 /* 4. Add accessible line-height & improve text rendering */
@@ -34,6 +36,11 @@ svg {
     max-width: 100%;
 }
 
+img,
+video {
+    object-fit: cover;
+
+}
 /* 6. Inherit fonts for form controls */
 input,
 button,
