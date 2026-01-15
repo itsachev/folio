@@ -10,7 +10,7 @@ onMounted(() => {
         scrollTrigger: {
             trigger: ".animate-me-on-scroll",
             start: "top 50%",
-            end: "top 20%",
+            end: "top 20%", 
             scrub: 1,
         },
     })
