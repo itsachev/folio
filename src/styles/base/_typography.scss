@@ -1,5 +1,21 @@
 :root {
-  --font-heading: "Space Grotesk", sans-serif;
+  --font-heading: "Italiana", serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 h1,
@@ -9,5 +25,5 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
 }

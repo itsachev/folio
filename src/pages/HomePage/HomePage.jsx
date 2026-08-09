@@ -1,23 +1,38 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setLoading } from "@/store/appSlice";
+import { useEffect, useRef } from "react";
+/* utils */
+import splitText from "@/utils/splitText";
+
+import "./HomePage.scss";
 
 function HomePage() {
-  const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.app.isLoading);
+  const headingRef = useRef(null);
+  const headingRefTwo = useRef(null);
+  const subtitleRef = useRef(null);
 
   useEffect(() => {
-    dispatch(setLoading(true));
-    console.log("isLoading", isLoading);
-  }, [dispatch, isLoading]);
+    const titleOne = headingRef.current;
+    const titleTwo = headingRefTwo.current;
+    const subtitle = subtitleRef.current;
+
+    splitText("Ivaylo", titleOne);
+    splitText("Tsachev", titleTwo);
+    splitText("Frontend Developer", subtitle);
+
+    return () => {
+      titleOne.innerHTML = "";
+      titleTwo.innerHTML = "";
+      subtitle.innerHTML = "";
+    };
+  }, []);
 
   return (
     <div className="page">
       <section className="hero-section">
-        <h1 className="hero-section__title">Ivo Folio</h1>
-        <p className="hero-section__description">
-          A simple portfolio website template.
-        </p>
+        <div className="hero-section__titles-container flex-center flex-col ais">
+          <h1 className="hero-section__title flex" ref={headingRef} />
+          <h1 className="hero-section__title flex" ref={headingRefTwo} />
+          <p className="hero-section__subtitle flex" ref={subtitleRef}></p>
+        </div>
       </section>
     </div>
   );
