@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:5195/ -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(node \"C:\\\\Users\\\\itsa4\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--work-ivo-folio\\\\497ba5a3-60d3-4a68-8f13-26cd9ae2c35a\\\\scratchpad\\\\cdp-check6.mjs\" \"ws://localhost:9999/devtools/page/EC99FC81D4AFEAF5B084E8C6D079EB2E\")"
+    ]
+  }
+}

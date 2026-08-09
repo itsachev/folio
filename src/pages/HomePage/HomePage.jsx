@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import heroBg from "@/assets/me.jpg";
+import heroBg from "@/assets/me_2.jpg";
 import { useSelector } from "react-redux";
 /* utils */
 import splitText from "@/utils/splitText";
