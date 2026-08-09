@@ -8,3 +8,11 @@
 @use "utilities/flex";
 @use "utilities/text";
 @use "utilities/state";
+
+.fade-text {
+  font-size: 10vw;
+  max-width: 80vw;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 10rem 0;
+}
