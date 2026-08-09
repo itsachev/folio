@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="app-header">
       <nav className="app-header__nav">
-        <ul className="app-header__nav-list">
+        <ul className="app-header__nav-list flex">
           <li className="app-header__nav-item">
             <Link className="app-header__nav-link" to="/">
               Home

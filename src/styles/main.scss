@@ -1,6 +1,15 @@
 @use "base/reset";
 @use "base/typography";
 @use "base/grid";
+@use "base/lenis";
+
+body.js-scroll-disabled {
+  overflow: hidden !important;
+}
+
+.char-mask {
+  overflow: hidden;
+}
 
 .char-space {
   margin: 0 0.1em;

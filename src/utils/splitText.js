@@ -1,8 +1,4 @@
-// function which returns each character inside following patters
-// <div className="char-mask"><span className="char">a<span/></div>
-
 function splitText(string, parentNode) {
-    console.error('splitText is called with:', string);
     if (!string) throw new Error('string is required');
     const formattedString = string.replaceAll(' ', '').toLowerCase();
 
