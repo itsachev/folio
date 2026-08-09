@@ -1,0 +1,33 @@
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+
+.flex-col {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jce {
+  justify-content: end;
+}
+
+.ais {
+  align-items: start;
+}
+
+.aie {
+  align-items: end;
+}
+
+.aic {
+  align-items: center;
+}
