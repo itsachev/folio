@@ -13,6 +13,8 @@ function LenisProvider({ children }) {
     const lenis = new Lenis();
     lenisRef.current = lenis;
 
+    lenis.scrollTo(0, { immediate: true, force: true });
+
     lenis.on("scroll", ScrollTrigger.update);
 
     const onTick = (time) => {
