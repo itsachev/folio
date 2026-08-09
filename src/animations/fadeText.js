@@ -15,7 +15,7 @@ function fadeText(selector = ".fade-text") {
     splits.forEach((split) => {
       gsap.fromTo(
         split.chars,
-        { opacity: 0.2 },
+        { opacity: 0.1 },
         {
           opacity: 1,
           duration: 1,
@@ -23,7 +23,7 @@ function fadeText(selector = ".fade-text") {
           scrollTrigger: {
             trigger: split.elements[0],
             start: "top 80%",
-            end: "bottom 20%",
+            end: "bottom 40%",
             scrub: true,
           },
         },

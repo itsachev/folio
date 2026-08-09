@@ -50,11 +50,11 @@ function HomePage() {
       </section>
 
       <section className="about-section">
-        <h2 className="fade-text">
+        <p className="fade-text">
           I`m a selectively skilled <span>developer</span> with strong focus on
           frontend technologies, producing high quality & impactful digital
           experiences.
-        </h2>
+        </p>
       </section>
     </div>
   );

@@ -10,9 +10,10 @@
 @use "utilities/state";
 
 .fade-text {
-  font-size: 10vw;
+  font-size: 5vw;
   max-width: 80vw;
   margin: 0 auto;
   font-weight: bold;
   padding: 10rem 0;
+  line-height: 1.1;
 }
