@@ -2,8 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App.jsx";
-import "@fontsource/space-grotesk/500.css";
-import "@fontsource/space-grotesk/700.css";
+import "@fontsource/italiana/400.css";
 import "@/styles/main.scss";
 
 createRoot(document.getElementById("root")).render(
