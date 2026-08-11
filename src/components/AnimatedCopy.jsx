@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 import { gsap, SplitText, ScrollTrigger, useGSAP } from "@/lib/gsap";
 
 const ACCENT_BAND = 6;
+const TRANSITION_DURATION = 0.4;
+const INITIAL = 0;
+const ACCENT = 1;
+const FINAL = 2;
 
 export default function AnimatedCopy({
   children,
@@ -47,10 +51,27 @@ export default function AnimatedCopy({
       gsap.set(allChars, { color: colorInitial });
 
       const totalChars = allChars.length;
+      const zoneColor = {
+        [INITIAL]: colorInitial,
+        [ACCENT]: colorAccent,
+        [FINAL]: colorFinal,
+      };
+      const charZones = allChars.map(() => INITIAL);
+
+      const setZone = (char, index, zone) => {
+        if (charZones[index] === zone) return;
+        charZones[index] = zone;
+        gsap.to(char, {
+          color: zoneColor[zone],
+          duration: TRANSITION_DURATION,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      };
 
       ScrollTrigger.create({
         trigger: containerRef.current,
-        start: "top 90%",
+        start: "top 60%",
         end: "top 10%",
         scrub: 1,
         onUpdate: (self) => {
@@ -62,18 +83,16 @@ export default function AnimatedCopy({
 
           allChars.forEach((char, index) => {
             if (!isScrollingDown) {
-              gsap.set(char, {
-                color: index < finalBoundary ? colorFinal : colorInitial,
-              });
+              setZone(char, index, index < finalBoundary ? FINAL : INITIAL);
               return;
             }
 
             if (index >= sweepIndex) {
-              gsap.set(char, { color: colorInitial });
+              setZone(char, index, INITIAL);
             } else if (index >= finalBoundary) {
-              gsap.set(char, { color: colorAccent });
+              setZone(char, index, ACCENT);
             } else {
-              gsap.set(char, { color: colorFinal });
+              setZone(char, index, FINAL);
             }
           });
         },

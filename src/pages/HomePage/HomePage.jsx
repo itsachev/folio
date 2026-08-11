@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import heroBg from "@/assets/me_2.jpg";
 import { useSelector } from "react-redux";
 import heroReveal from "@/animations/heroReveal";
-import fadeText from "@/animations/fadeText";
 import { PRELOADER_END } from "@/components/preloader/Preloader";
 
 import AnimatedCopy from "@/components/AnimatedCopy";
