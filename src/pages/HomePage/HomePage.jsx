@@ -5,6 +5,8 @@ import heroReveal from "@/animations/heroReveal";
 import fadeText from "@/animations/fadeText";
 import { PRELOADER_END } from "@/components/preloader/Preloader";
 
+import AnimatedCopy from "@/components/AnimatedCopy";
+
 import "./HomePage.scss";
 
 function HomePage() {
@@ -30,10 +32,10 @@ function HomePage() {
     });
   }, []);
 
-  useEffect(() => fadeText(), []);
+  // useEffect(() => fadeText(), []);
 
   return (
-    <div className="page" style={{ height: "300dvh" }}>
+    <div className="page">
       <section className="hero-section" ref={heroRef}>
         <img className="hero-section__bg" ref={heroBgRef} src={heroBg} alt="" />
         <div className="hero-section__titles-container flex-center flex-col ais">
@@ -50,11 +52,48 @@ function HomePage() {
       </section>
 
       <section className="about-section">
-        <p className="fade-text">
-          I`m a selectively skilled <span>developer</span> with strong focus on
-          frontend technologies, producing high quality & impactful digital
-          experiences.
-        </p>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
+        <AnimatedCopy>
+          <p className="fade-text">
+            I`m a selectively skilled <span>developer</span> with strong focus
+            on frontend technologies, producing high quality & impactful digital
+            experiences.
+          </p>
+        </AnimatedCopy>
       </section>
     </div>
   );
